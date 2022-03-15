@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Festive&family=Hubballi&family=Indie+Flower&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/d2c2d9ad81.js" crossorigin="anonymous"></script>
+<style>
+        .container{
+            max-width: 550px;
+            margin: auto;
+            margin-top: 100px;
+            
+            background-color: #fff;
+            box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+            font-family: 'Hubballi', cursive;
+            text-align: center;
+
+            
+        }
+        .list{
+            display: flex;
+            justify-content: space-around;
+           
+        }
+        tr{
+            /* background-color: yellow; */
+            text-align: center;
+            padding: 30px;
+        }
+        .icons{
+            justify-content: space-evenly;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            /* border: #d64f29 solid 1px; */
+            margin: 10px;
+            /* background-color: #F25022; */
+            transition: 1s linear;
+            transition-property: all;
+
+        }
+        .icons:hover{
+            text-decoration: underline;
+        }
+        td a{
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+            text-decoration: none;
+        }
+        th{
+            font-size: 50px;
+            padding: 30px;
+        }
+        hr #task_line{
+            width: 60%;
+        }
+        .header{
+            background-color: #F25022;
+            margin: auto;
+            padding: 30px;
+        }
+         #title{
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .add_task{
+            font-size: 50px;
+            font-weight: 800;
+
+        }
+        .add_task a{
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s linear;
+            transition-property: all;
+        }
+        .add_task a:hover{
+            color: #4285F4;
+        }
+        i{
+            font-size: 30px;
+            color: white;
+        }
+        
+        #del{
+            font-size: 20px;
+            font-weight: 800;
+            /* background-color: yellow; */
+        }
+        .input_del{
+            font-size: 20px;
+            margin: 30px;
+            gap: 30px;
+            background-color: #F25022;
+            font-weight: 800;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Indie Flower', cursive;
+            letter-spacing: 3px;
+
+        }
+        .input_del:hover{
+            background-color: #d64f29;
+            cursor: pointer;
+        }
+        body{
+            background:url('https://img.wallpapersafari.com/desktop/1440/900/98/65/iTle9A.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="header">
+        {% block header_list%}
+
+        {% endblock header_list %}
+    </div> 
+    {% block content%}
+
+        {% endblock content %}
+
+        
+    </div>
+    
+</body>
+</html>

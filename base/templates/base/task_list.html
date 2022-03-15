@@ -1,0 +1,36 @@
+{% extends 'base\main.html'%}
+
+{% block header_list%}
+    <h1>Notes_Making APP</h1>
+    <hr>
+    <div class="add_task">
+        <a href="{% url 'task-create' %}">| Add Notes__ |</a>
+    </div>
+    <hr>
+    {% endblock header_list %}
+    {%block content%}
+<table>
+    <tr>
+        <th>Notes
+            <hr>
+        </th>
+        <td></td>
+    </tr>
+    {% for task in object_list %}
+    <tr>
+        <td id="title">{{task.title}}</td>
+        <td class="icons"  ><a href="{% url 'task' task.id %}">View</a></td>
+        <td class="icons" ><a href="{% url 'task-update' task.id %}">Edit</a></td>
+        <td class="icons" ><a href="{% url 'task-delete' task.id %}">Delete</a></td>
+
+    </tr>
+    
+    {%empty%}
+    <h3>No Items in List</h3> 
+    {%endfor%}
+</table>
+
+
+
+
+{% endblock content %}
